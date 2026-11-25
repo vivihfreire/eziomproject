@@ -1,0 +1,34 @@
+{% extends "refeitorio/base.html" %}
+
+{% block titulo %}
+Página Inicial
+{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container">
+ <div class="row">
+
+ <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+   <div class="card">
+    <div class="card-body">
+     <h5 class="card-title">Cadastrar Aluno</h5>
+     <p class="card-text"> Cadastre aqui um novo <code>Aluno</code>. </p>
+     <a href="#" class="btn btn-primary"> Novo Aluno </a>
+    </div>
+ </div>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <div class="card">
+   <div class="card-body">
+   <h5 class="card-title">Cadastrar Turma</h5>
+   <p class="card-text"> Cadastre aqui uma nova <code>Turma</code>. </p>
+   <a href="#" class="btn btn-primary"> Nova Turma </a>
+  </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+{% endblock %}

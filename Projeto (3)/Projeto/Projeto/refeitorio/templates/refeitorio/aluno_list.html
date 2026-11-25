@@ -1,0 +1,54 @@
+{% extends "refeitorio/base.html" %}
+
+{% block titulo %}
+Página Inicial
+{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lista de Alunos</h5>
+                    {% if alunos|length > 0 %}
+                    <p class="card-text">
+                        Aqui está a lista de <code>Alunos</code> cadastrados.
+                    </p>
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Turma:</th>
+                                <th>Matricula</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in alunos %}
+                            <tr>
+                                <td>{{ p.pk }}</td>
+                                <td>{{ p.nome_aluno }}</td>
+                                <td>{{ p.turma }}</td>
+                                <td>{{ p.matricula }}</td>
+                                <td>{{ p.situacao }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-info"> Detalhes</a>
+                                    <a href="#" class="btn btn-primary"> Atualizar</a>
+                                    <a href="#" class="btn btn-danger"> Excluir </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                        <div class="text-center mt-5 mb-5 jumbotron">
+                            <h5>Nenhum <code>Aluno</code> cadastrado ainda.</h5>
+                        </div>
+                    {% endif %}
+                    <hr />
+                    <div class="text-right">
+                        <a class="btn btn-primary" href="#"> Cadastrar Professor</a>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

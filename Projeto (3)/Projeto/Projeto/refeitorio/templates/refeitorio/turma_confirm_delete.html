@@ -1,0 +1,9 @@
+<form method="post">
+{% csrf_token %} 
+Você tem certeza que quer excluir a turma <b>{{ turma.turma }}</b>?
+<br><br>
+<button type="button">
+<a href="{% url 'turma_list' %}">Cancelar</a>
+</button>
+<button>Excluir</button>
+</form>
