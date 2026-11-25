@@ -32,8 +32,8 @@ Página Inicial
                                 <td>{{ p.matricula }}</td>
                                 <td>{{ p.situacao }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-info"> Detalhes</a>
-                                    <a href="#" class="btn btn-primary"> Atualizar</a>
+                                    <a href="{% url 'aluno_detail' p.pk %}" class="btn btn-primary"> Detalhes</a>
+                                    <a href="#" class="btn btn-success"> Atualizar</a>
                                     <a href="#" class="btn btn-danger"> Excluir </a>
                                 </td>
                             </tr>
@@ -47,7 +47,9 @@ Página Inicial
                     {% endif %}
                     <hr />
                     <div class="text-right">
-                        <a class="btn btn-primary" href="#"> Cadastrar Professor</a>
+                        <a class="btn btn-primary" href="{% url 'aluno_create' %}">
+                            Cadastrar Aluno
+                        </a>
                     </div>
                 </div>
             </div>

@@ -4,5 +4,8 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
+    #incluir as urls do app refeitorio
     path('', include('refeitorio.urls')),
+
 ]

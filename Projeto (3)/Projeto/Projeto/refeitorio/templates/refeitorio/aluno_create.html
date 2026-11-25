@@ -1,9 +1,15 @@
+{% extends "refeitorio/base.html" %}
 
-<h1>Cadastrar aluno</h1>
-
+{% block conteudo %}
+<h1>Novo Aluno</h1>
 <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-
-<input type="submit" value="Salvar">
-</form>
+    {{form.as_p}}
+    
+    <button type="submit" class="btn btn-success">
+        Salvar
+        </button>
+        <a href="{% url 'aluno_list' %}" class="btn btn-primary">
+            Cancelar</a>
+            </form>
+        {% endblock %}
